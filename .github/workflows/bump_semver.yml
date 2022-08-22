@@ -1,8 +1,8 @@
 name: Bump patch version
 on:
-  push:
-    branches:
-      - main
+  pull_request:
+    types:
+      - closed
 jobs:
   config:
     runs-on: ubuntu-latest
