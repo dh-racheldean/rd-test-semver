@@ -1,0 +1,8 @@
+config:
+- dags/**
+
+core:
+- '!dags/**'
+
+airflow:
+- airflow.version
