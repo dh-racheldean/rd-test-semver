@@ -8,7 +8,7 @@ on:
 jobs:
   config:
     runs-on: ubuntu-latest
-    if: contains(github.event.pull_request.labels.*.name, 'config')
+    if: ${{ (github.event.pull_request.merged == true) && (contains(github.event.pull_request.labels.*.name, 'config')) }}
     steps:
     - uses: actions/checkout@v2
       with:
@@ -21,7 +21,7 @@ jobs:
         DEFAULT_BUMP: patch
   core:
     runs-on: ubuntu-latest
-    if: contains(github.event.pull_request.labels.*.name, 'core')
+    if: ${{ (github.event.pull_request.merged == true) && (contains(github.event.pull_request.labels.*.name, 'core')) }}
     steps:
     - uses: actions/checkout@v2
       with:
@@ -34,7 +34,7 @@ jobs:
         DEFAULT_BUMP: minor
   airflow:
     runs-on: ubuntu-latest
-    if: contains(github.event.pull_request.labels.*.name, 'airflow')
+    if: ${{ (github.event.pull_request.merged == true) && (contains(github.event.pull_request.labels.*.name, 'airflow')) }}
     steps:
     - uses: actions/checkout@v2
       with:
