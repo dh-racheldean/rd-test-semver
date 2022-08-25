@@ -1,6 +1,12 @@
 name: called
 on:
   workflow_call:
+    inputs:
+      image_name:
+        required: true
+        type: string
+      tag:
+        type: string
   workflow_dispatch:
 jobs:
   doathing:
