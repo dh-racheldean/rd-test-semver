@@ -47,6 +47,4 @@ jobs:
     needs: [core, airflow]
     if: ${{ always() }}
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: dh-richarddean/rd-test-semver/.github/workflows/called_task.yml@main
+    uses: dh-richarddean/rd-test-semver/.github/workflows/called_task.yml@main
