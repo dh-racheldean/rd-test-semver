@@ -1,0 +1,12 @@
+name: called
+on:
+  workflow_call:
+    inputs:
+      username:
+        required: false
+        type: string
+jobs:
+  doathing:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
