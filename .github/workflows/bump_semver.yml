@@ -46,5 +46,4 @@ jobs:
   deploy:
     needs: [core, airflow]
     if: ${{ always() }}
-    runs-on: ubuntu-latest
     uses: dh-richarddean/rd-test-semver/.github/workflows/called_task.yml@main
