@@ -1,10 +1,7 @@
 name: called
 on:
   workflow_call:
-    inputs:
-      username:
-        required: false
-        type: string
+  workflow_dispatch:
 jobs:
   doathing:
     runs-on: ubuntu-latest
