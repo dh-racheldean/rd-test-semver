@@ -49,4 +49,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - run: |-
+          find .
       - uses: ./.github/workflows/called_task.yml
