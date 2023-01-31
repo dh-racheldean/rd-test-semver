@@ -6,7 +6,7 @@
     "CHECKS": {
       "prefixes": ["ADHOC ", "HOTFIX "],
       "regexp": "[A-Z]*-[0-9]* ",
-      "regexpFlags": "i",
+      "regexpFlags": "i"
     },
     "MESSAGES": {
       "success": "All OK",
